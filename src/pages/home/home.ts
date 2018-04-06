@@ -17,8 +17,8 @@ export class HomePage {
 
   getData(){
 
-    this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').subscribe(data => {
-        this.posts = data.data.children;
+    this.http.get('https://www.reddit.com/r/funny/hot/.json?limit=20').subscribe(data => {
+        this.posts = data['data']['children'];
         console.log(this.posts);
     });
   }

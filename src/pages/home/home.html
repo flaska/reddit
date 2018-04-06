@@ -8,5 +8,11 @@
 </ion-header>
 
 <ion-content padding>
-  
+  <ion-list>
+    <div ion-item *ngFor="let post of posts">
+      <h2>{{post.data.title}}</h2>
+      <img src="{{post.data.url}}">
+    
+    </div>
+  </ion-list>
 </ion-content>
